@@ -2,6 +2,8 @@
 
 A structured set of context documents used to kickstart Claude Code sessions. Rather than re-explaining the same project background, lab equipment, and workflows every time, paste the relevant files into Claude at the start of a session and get straight to work.
 
+> **Reminder:** When starting work on a new repo, update the fine-grained GitHub personal access token to include that repo before asking Claude to create issues, PRs, or push branches. Settings → Developer settings → Personal access tokens → Fine-grained tokens.
+
 ---
 
 ## Structure
