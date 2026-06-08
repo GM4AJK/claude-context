@@ -52,6 +52,7 @@ Control references for networked bench instruments. Paste these when Claude need
 |---|---|
 | [`SDS824X.md`](lab/SDS824X.md) | Siglent SDS824X HD oscilloscope — SCPI over TCP (`192.168.0.87:5025`). Covers time-domain measurements, raw waveform download, FFT configuration and peak search, THD calculation. |
 | [`FY6800.md`](lab/FY6800.md) | Feeltech FY6800 signal generator — ASCII serial protocol over USB/CH340. Covers USB setup (usbipd-win + WSL2), command reference, frequency encoding, and a working Python control class. |
+| [`EllisysUSBExplorer200.md`](lab/EllisysUSBExplorer200.md) | Ellisys USB Explorer 200 — non-intrusive USB 2.0 protocol analyzer. Covers capabilities, capture/decode features, and what it's used for (gps-staff USB stack verification: enumeration, CDC/MSC composite debugging, current-draw transitions). GUI-driven, not SCPI/serial-scriptable like the other lab instruments. |
 
 **When to paste:** When writing or debugging Python automation scripts that control instruments. The SDS824X and FY6800 docs are often needed together.
 

@@ -10,4 +10,8 @@ A Siglent SDS824X HD network connected oscilloscope
 
 A Feeltech FY6800 signal generator connected via USB
 
+## EllisysUSBExplorer200.md
+
+An Ellisys USB Explorer 200 USB 2.0 protocol analyzer
+
 
