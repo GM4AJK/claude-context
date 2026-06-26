@@ -37,12 +37,14 @@ After reading `projects/gps-staff.md`, ask: **"Which area of GPS Staff are we fo
 
 | Answer | Read next |
 |--------|-----------|
-| Handheld / LVGL / display / UI | `projects/gps-staff/handheld.md` |
-| STM32 / firmware / Nucleo / F765 / F767 / F446 | `projects/gps-staff/stm32-firmware.md` |
+| Handheld / LVGL / display / UI | `projects/gps-staff/handheld.md`, then `sdd/features/HANDHELD.md` in gps-staff repo |
+| STM32 / firmware / Nucleo / F765 / F767 / F446 / base / rover | `projects/gps-staff/stm32-firmware.md`, then `sdd/features/BASE.md` or `ROVER.md` as relevant |
 | Hardware / PCB / schematic / components / pins | `projects/gps-staff/hardware.md` |
 | Comms / LoRa / GFSK / BLE / ESP-NOW / radio | `projects/gps-staff/comms.md` |
-| ESP32 Zero / base bridge / rover bridge | `projects/gps-staff/comms.md` and `projects/gps-staff/hardware.md` |
+| ESP32 Zero / base bridge / rover bridge | `projects/gps-staff/comms.md`, then `sdd/features/BASE.md` in gps-staff repo |
 | General / not sure | No further reading needed — overview is enough to start |
+
+After reading a covering file (`BASE.md`, `ROVER.md`, `HANDHELD.md`), only read an individual feature spec from `sdd/features/` if that specific feature is what we are actively working on today.
 
 ---
 

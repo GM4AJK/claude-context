@@ -1,5 +1,7 @@
 # GPS Staff — Handheld (ESP32-S3 4.3" Touch Display)
 
+> **Current state:** Read `sdd/features/HANDHELD.md` in the gps-staff repo for the live capability index and pending work. Individual feature specs in `sdd/features/` only need reading when actively working on that feature.
+
 ## Hardware
 
 **Waveshare ESP32-S3-Touch-LCD-4.3**

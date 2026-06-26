@@ -1,5 +1,7 @@
 # GPS Staff — STM32 Firmware Conventions
 
+> **Current state:** Read `sdd/features/BASE.md` or `sdd/features/ROVER.md` in the gps-staff repo for the live capability index and pending work. Individual feature specs in `sdd/features/` only need reading when actively working on that feature.
+
 ## Build & Flash
 
 Built and flashed by the **user in STM32CubeIDE**. Do not run `make` or any build commands from the CLI. Claude edits source; user builds and flashes, then pastes serial output if needed.
