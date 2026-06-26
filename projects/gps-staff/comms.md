@@ -1,5 +1,7 @@
 # GPS Staff — Communications Architecture
 
+> **Current state:** Read `sdd/features/BASE.md`, `sdd/features/ROVER.md`, or `sdd/features/HANDHELD.md` in the gps-staff repo for the live capability index per unit. Individual feature specs in `sdd/features/` only need reading when actively working on that feature.
+
 ## System Diagram
 
 ```

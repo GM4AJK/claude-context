@@ -1,5 +1,7 @@
 # GPS Staff — Hardware & PCB
 
+> **Current state:** Read `sdd/features/BASE.md`, `sdd/features/ROVER.md`, or `sdd/features/HANDHELD.md` in the gps-staff repo for the live capability index per unit. Individual feature specs in `sdd/features/` only need reading when actively working on that feature.
+
 ## PCB Staff Unit (×2 — base and rover, identical)
 
 Custom 4-layer PCB. Ordered JLCPCB 2026-06-25, tagged `PCB-v1.0`. **Cannot be changed** — any issues are ECOs for v1.1. Gerbers: `hardware/rtk/rtk/gerbers_v1_0/`.

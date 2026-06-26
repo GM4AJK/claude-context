@@ -24,7 +24,19 @@ A DIY RTK GNSS survey staff — base + rover pair, identical custom PCBs. User p
 1. **Base setup:** Plant base → configure (known coords or F9P self-survey) → start streaming
 2. **Survey:** Walk with rover + handheld. Base is a dumb RTCM transmitter. "Base: OK" = RTCM flowing.
 
-## Current Status (2026-06-26)
+## Current State — Covering Files
+
+For live capability status per unit, read these files in the gps-staff repo (faster than scanning individual feature specs):
+
+| File | Covers |
+|------|--------|
+| `sdd/features/BASE.md` | esp32-base (base role) + STM32 base firmware |
+| `sdd/features/ROVER.md` | esp32-base (rover role) + STM32 rover firmware |
+| `sdd/features/HANDHELD.md` | esp32-handheld |
+
+Individual feature specs live in `sdd/features/nnnnn-name.md` — only read when actively working on that feature.
+
+## Snapshot Status (2026-06-26)
 
 | Area | Status |
 |------|--------|
