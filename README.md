@@ -10,7 +10,7 @@ A structured set of context documents used to kickstart Claude Code sessions. Ra
 
 ```
 claude-context/
-├── workflows/          # How to work: git, GitHub, requirements
+├── workflows/          # How to work: git, GitHub, design specs
 ├── projects/           # What to work on: per-project background docs
 └── lab/                # What's on the bench: instrument control references
 ```
@@ -19,15 +19,14 @@ claude-context/
 
 ## workflows/
 
-Standard processes for git, GitHub, and turning ideas into tracked requirements.
+Standard processes for git, GitHub, and speccing a feature before writing code.
 
 | File | Purpose |
 |---|---|
-| [`WORKFLOW.md`](workflows/WORKFLOW.md) | End-to-end process: requirements doc → issue → branch → implement → PR → merge |
+| [`WORKFLOW.md`](workflows/WORKFLOW.md) | End-to-end process: design spec (agreed via discussion) → branch → implement → PR → merge |
 | [`git/context-snippets.md`](workflows/git/context-snippets.md) | Ready-to-paste git commands to orient Claude at session start, before a feature, while debugging, or before a PR |
-| [`requirements/fleshing-out.md`](workflows/requirements/fleshing-out.md) | How to use Claude to turn a rough idea into a well-defined GitHub issue — four stages with prompt templates |
 
-**When to paste:** At the start of any session where you're doing git work or starting a new requirement.
+**When to paste:** At the start of any session where you're doing git work or starting a new feature.
 
 ---
 
@@ -72,7 +71,6 @@ Control references for networked bench instruments. Paste these when Claude need
 | Task | Paste |
 |---|---|
 | Starting any git/GitHub work | `workflows/WORKFLOW.md` |
-| Turning an idea into an issue | `workflows/requirements/fleshing-out.md` |
 | Orienting Claude in the repo | `workflows/git/context-snippets.md` output |
 | Working on TwinTorqueESC | `projects/TwinTorqueESC.md` |
 | Working on ClaudeDemo | `projects/CLAUDEDEMO.md` |
