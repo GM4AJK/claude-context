@@ -39,6 +39,7 @@ One file per project. Each file gives Claude the full background it needs before
 |---|---|
 | [`TwinTorqueESC.md`](projects/TwinTorqueESC.md) | Dual-motor ESC for drones — STM32G431KBT6, register-level C, no HAL. Covers hardware stack (DRV8300, BSC014N04LS FETs), firmware phases (trapezoidal → BEMF → DSHOT → FOC), and current status. |
 | [`CLAUDEDEMO.md`](projects/CLAUDEDEMO.md) | IIR filter demo on STM32G431 with automated Bode plot verification — Claude controls the FY6800 signal generator and SDS824X oscilloscope via Python to run hardware-in-the-loop tests. |
+| [`SOWB.md`](projects/SOWB.md) | Satellite Observer Workbench — STM32G491RE Nucleo, HAL-based, superloop (no RTOS). GPS-disciplined UTC clock, dual MAX7456 OSD channels, passive RX-only tap on a Skywatcher AltAz mount's serial link. |
 
 **When to paste:** Before asking Claude to work on a specific project. Only paste the relevant project file — not all of them.
 
@@ -75,6 +76,7 @@ Control references for networked bench instruments. Paste these when Claude need
 | Orienting Claude in the repo | `workflows/git/context-snippets.md` output |
 | Working on TwinTorqueESC | `projects/TwinTorqueESC.md` |
 | Working on ClaudeDemo | `projects/CLAUDEDEMO.md` |
+| Working on SOWB | `projects/SOWB.md` |
 | Writing instrument control Python | `lab/SDS824X.md` and/or `lab/FY6800.md` |
 
 **Keep project files current.** When a project's status changes (parts arrive, a phase completes, hardware decisions are made), update the relevant file here so the next session starts with accurate context.

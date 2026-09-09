@@ -16,6 +16,7 @@ Ask: **"I've read claude-context/CLAUDE.md. What are we working on today?"**
 | TwinTorqueESC / ESC | `projects/TwinTorqueESC.md` — done, no Step 2 |
 | DigitalScales / scales | `projects/DigitalScales.md` — done, no Step 2 |
 | ClaudeDemo / demo | `projects/CLAUDEDEMO.md` — done, no Step 2 |
+| SOWB / Satellite Observer Workbench | `projects/SOWB.md` — done, no Step 2 |
 | Lab instrument / Python scripts | go to Step 1b |
 | Git / GitHub / workflow | `workflows/WORKFLOW.md` — done, no Step 2 |
 

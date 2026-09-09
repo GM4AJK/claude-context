@@ -14,6 +14,13 @@ The dual ESC (electronic speed controller) developed using the STM32G431KBT6
 
 STM32G431KB digital scale — HX711 load cell ADC, SH1106 128×64 OLED display, custom large 7-segment font. Covers the SH1106 column-offset fix, fontx font design, and HX711 bit-bang driver.
 
+## SOWB.md
+
+Satellite Observer Workbench — STM32G491RE Nucleo (HAL-based), GPS-disciplined UTC clock, dual
+MAX7456 OSD video channels, and a passive RX-only tap on a Skywatcher AltAz mount's PC serial
+link. Superloop (no RTOS). Covers hardware/pin map, planned software modules, and the
+superloop/RX-tap design decisions with rationale.
+
 ## gps-staff.md + gps-staff/
 
 DIY RTK GNSS survey staff — base + rover PCBs (STM32F765VIT + ZED-F9P + SX1262), ESP32-S3 Zero comms bridges, ESP32-S3 4.3" handheld controller. `gps-staff.md` is the overview/status index. Sub-files in `gps-staff/` cover focused areas:
