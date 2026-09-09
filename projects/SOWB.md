@@ -85,6 +85,8 @@ Both SPI buses: master, full-duplex, ~5.3 MBit/s, DMA memory→peripheral on TX 
 
 Per `claude-context/workflows/WORKFLOW.md`, with SOWB-specific overrides:
 
+- **No GitHub issues.** Features are speced in-repo (`specs/<slug>.md`), written through
+  discussion and agreed *before* any code is written — not tracked as GitHub issues.
 - **HAL-based**, not bare-metal register writes (differs from TwinTorqueESC/CLAUDEDEMO, which
   are bare-metal-only) — the CubeMX-generated code already uses HAL SPI/UART/DMA APIs.
 - **User builds and flashes in STM32CubeIDE** — Claude does not build or run `make`, and does
@@ -101,4 +103,4 @@ Per `claude-context/workflows/WORKFLOW.md`, with SOWB-specific overrides:
 - `hardware/sowb/` is a KiCad PCB project (schematic/layout in progress).
 - Repo initialized and pushed to GitHub (`GM4AJK/sowb`) with a root `CLAUDE.md` covering build
   commands, the peripheral/pin map, and this same development-workflow/decisions context.
-- **Next step:** not yet defined — no requirements doc (`Docs/requirements/N-slug/`) opened yet.
+- **Next step:** not yet defined — no design spec (`specs/`) opened yet.

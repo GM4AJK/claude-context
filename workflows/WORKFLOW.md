@@ -4,80 +4,69 @@ Standard workflows for my projects including interacting with Git and GitHub
 
 ---
 
-## For each requirement
+## For each feature
 
-### 1. Create the requirements doc
+### 1. Draft the design spec — discuss before coding
 
 ```
-Docs/requirements/N-slug/README.md
+specs/<slug>.md
 ```
 
-Write the README covering: goal, test setup, measurement method, theory, and acceptance
-criteria. This is the specification — write it before any code.
+Written through discussion with Claude, not handed over ready-made: talk through the goal,
+approach/design, and acceptance criteria, iterating on the doc until it's right. This is the
+specification, and it comes before any code.
 
-### 2. Commit and push the doc
+**Do not start implementing until the spec is agreed.** If Claude is unsure whether a spec is
+settled, it should ask rather than assume and start coding.
+
+### 2. Commit and push the spec
 
 ```bash
-git add Docs/requirements/N-slug/README.md
-git commit -m "Add Req N requirements doc: <short description>"
+git add specs/<slug>.md
+git commit -m "Add design spec: <slug>"
 git push
 ```
 
-### 3. Create a GitHub issue
+### 3. Create a feature branch
 
 ```bash
-gh issue create --title "Req N: <title>" --body "Spec: Docs/requirements/N-slug/README.md"
+git checkout -b feature/<slug>
 ```
 
-Note the issue number.
-
-### 4. Create a feature branch
-
-```bash
-git checkout -b feature/N-slug
-```
-
-### 5. Implement firmware changes
+### 4. Implement firmware changes
 
 - Edit `Core/Src/main.c` and/or `Core/Src/stm32g4xx_it.c` inside
   `USER CODE BEGIN` / `USER CODE END` blocks
 - Peripheral init in static functions called from `USER CODE BEGIN 2`
 - Bare-metal register writes only — no HAL peripheral APIs
 
-### 6. Write the verification script
+### 5. Write a verification script, if the feature needs one
 
-Place the script alongside the README:
+No fixed location — place it wherever makes sense for that feature (alongside the spec, in an
+existing test directory, etc.). Not every feature needs one.
 
-```
-Docs/requirements/N-slug/test_<name>.py
-```
-
-### 7. Commit and push the implementation
+### 6. Commit and push the implementation
 
 ```bash
-git add Core/Src/main.c Core/Src/stm32g4xx_it.c \
-        Docs/requirements/N-slug/test_<name>.py
-git commit -m "Implement Req N: <short description>"
-git push -u origin feature/N-slug
+git add <changed files> <verification script, if any>
+git commit -m "Implement <slug>: <short description>"
+git push -u origin feature/<slug>
 ```
 
-### 8. Open a pull request
+### 7. Open a pull request
 
 ```bash
-gh pr create --title "Req N: <title>" \
-             --body "Implements #<issue number> ..."
+gh pr create --title "<title>" --body "Implements specs/<slug>.md"
 ```
 
-### 9. User builds and tests on hardware
+### 8. User builds and tests on hardware
 
-The user builds in STM32CubeIDE and runs the verification script. Claude does not build
-or flash — the user does this.
+The user builds in STM32CubeIDE and runs any verification script. Claude does not build
+or flash — the user does this. State the run command (if any) in the PR description.
 
-> **► Run:** `python3 Docs/requirements/N-slug/test_<name>.py`
+### 9. Merge on pass
 
-### 10. Merge on pass
-
-Once the script passes:
+Once verified:
 
 ```bash
 gh pr merge <PR number> --squash --delete-branch
@@ -94,4 +83,4 @@ git pull
 
 ## Git remote
 
-The `gh` CLI is authenticated and can create issues and PRs directly.
+The `gh` CLI is authenticated and can create PRs directly.
