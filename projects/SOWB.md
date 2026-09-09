@@ -30,10 +30,10 @@ The project has two parallel tracks:
   (discontinued part, two BOB modules on hand), one per video channel, each on its own dedicated
   SPI bus + DMA (no bus sharing)
 - **PC link:** USB Serial (PC comms) + G491 USB Serial (debug/console, via ST-Link VCP)
-- **Skywatcher AltAz mount link:** PC talks to the mount via a
-  [CH340C TTL serial breakout](https://thepihut.com/products/sparkfun-serial-basic-breakout-ch340c-and-usb-c).
-  The G491 taps both directions of that link on two **RX-only** UARTs, purely to extract mount
-  pointing data (alt/az) for the OSD — see Key Decisions below.
+- **Skywatcher AltAz mount link:** PC talks to the mount via a YP-05 FT232RL USB-TTL breakout
+  (VCCIO jumper set to 5V; originally planned around a CH340C, swapped for FT232RL hardware
+  already on hand — same role). The G491 taps both directions of that link on two **RX-only**
+  UARTs, purely to extract mount pointing data (alt/az) for the OSD — see Key Decisions below.
 
 ### Peripheral / pin map (STM32G491RETx, from `firmware/firmware.ioc`)
 
