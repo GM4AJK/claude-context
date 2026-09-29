@@ -96,6 +96,14 @@ Per `claude-context/workflows/WORKFLOW.md`, with SOWB-specific overrides:
 
 ---
 
+## Related Notes
+
+- [`SOWB/AltAzTheta.md`](SOWB/AltAzTheta.md) — evaluation note (not a build
+  yet) for a possible third mount axis for single-axis satellite tracking.
+  If it ever gets built, SOWB's Skywatcher serial tap goes blind on that
+  axis and needs a Theta-encoder input added — see that file's "Impact on
+  SOWB" section.
+
 ## Current Status
 
 - `firmware/` is CubeMX-generated scaffolding only (clock/peripheral init, empty `while(1)`) —
